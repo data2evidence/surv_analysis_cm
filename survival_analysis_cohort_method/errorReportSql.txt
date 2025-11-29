@@ -1,0 +1,41 @@
+DBMS:
+postgresql
+
+Error:
+org.postgresql.util.PSQLException: ERROR: relation "res_surv_analysis_spec_cancer_amit_100pct_1.cmkaplan_meier_dist" does not exist
+  Position: 25
+
+SQL:
+  SELECT
+    *
+  FROM
+    res_surv_analysis_spec_cancer_amit_100pct_1.cmkaplan_meier_dist cmkmd
+  WHERE
+    cmkmd.target_id = 1
+    AND cmkmd.comparator_id = 2
+    AND cmkmd.outcome_id = 3
+    AND cmkmd.analysis_id = 1
+    AND cmkmd.database_id = '';
+  
+
+R version:
+R version 4.4.1 (2024-06-14)
+
+Platform:
+aarch64-apple-darwin20
+
+Attached base packages:
+- stats
+- graphics
+- grDevices
+- utils
+- datasets
+- methods
+- base
+
+Other attached packages:
+- OhdsiReportGenerator (1.1.1)
+- OhdsiShinyModules (3.3.0)
+- dplyr (1.1.4)
+- DatabaseConnector (7.0.0)
+- shiny (1.11.1)

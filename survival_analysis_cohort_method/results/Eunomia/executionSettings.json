@@ -1,0 +1,21 @@
+{
+  "workDatabaseSchema": "cdmsynpuf100pct",
+  "cdmDatabaseSchema": "cdmsynpuf100pct",
+  "cohortTableNames": {
+    "cohortTable": "cohort_tbl",
+    "cohortSampleTable": "cohort_tbl",
+    "cohortInclusionTable": "cohort_tbl_inclusion",
+    "cohortInclusionResultTable": "cohort_tbl_inclusion_result",
+    "cohortInclusionStatsTable": "cohort_tbl_inclusion_stats",
+    "cohortSummaryStatsTable": "cohort_tbl_summary_stats",
+    "cohortCensorStatsTable": "cohort_tbl_censor_stats"
+  },
+  "tempEmulationSchema": "cdmsynpuf100pct",
+  "workFolder": "/Users/amit.sharma/Documents/Projects/strategus_projects/strategus_notebooks/survival_analysis_cohort_method/results/Eunomia/strategusWork",
+  "resultsFolder": "/Users/amit.sharma/Documents/Projects/strategus_projects/strategus_notebooks/survival_analysis_cohort_method/results/Eunomia/strategusOutput",
+  "logFileName": "/Users/amit.sharma/Documents/Projects/strategus_projects/strategus_notebooks/survival_analysis_cohort_method/results/Eunomia/strategusOutput/strategus-log.txt",
+  "minCellCount": 5,
+  "incremental": true,
+  "maxCores": 11,
+  "attr_class": ["CdmExecutionSettings", "ExecutionSettings"]
+}

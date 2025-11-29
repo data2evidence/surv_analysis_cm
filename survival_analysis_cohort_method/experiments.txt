@@ -1,0 +1,7 @@
+Round 1 - 
+    schemaName - "surv_analysis_spec_cancer_amit_100pct_1
+    description - study with PS matching (with default parameters), and default outcome model parameters
+Round 2 - 
+    schemaName - "surv_analysis_spec_cancer_amit_100pct_2
+    description - two studies - 1) study with PS matching (with default parameters), and outcome model parameters (stratified=True, useCovariates=True)
+                    2) study with no ps matching, outcome model parameters (useCovariates=True)

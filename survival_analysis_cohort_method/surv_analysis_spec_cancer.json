@@ -1,0 +1,363 @@
+{
+  "sharedResources": [
+    {
+      "cohortDefinitions": [
+        {
+          "cohortId": 1,
+          "cohortName": "cancer with chemotherapy",
+          "cohortDefinition": "{\n  \"ConceptSets\": [\n    {\n      \"id\": 0,\n      \"name\": \"[OHDSI-NL] Breast cancer\",\n      \"expression\": {\n        \"items\": [\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"254837009\",\n              \"CONCEPT_ID\": 4112853,\n              \"CONCEPT_NAME\": \"Malignant tumor of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"126926005\",\n              \"CONCEPT_ID\": 81251,\n              \"CONCEPT_NAME\": \"Neoplasm of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"269485000\",\n              \"CONCEPT_ID\": 72576,\n              \"CONCEPT_NAME\": \"Benign tumor of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"isExcluded\": true,\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"126510002\",\n              \"CONCEPT_ID\": 4054740,\n              \"CONCEPT_NAME\": \"Neoplasm of skin of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"isExcluded\": true,\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"712989008\",\n              \"CONCEPT_ID\": 37016850,\n              \"CONCEPT_NAME\": \"Phyllodes tumor of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"isExcluded\": true,\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"189336000\",\n              \"CONCEPT_ID\": 81250,\n              \"CONCEPT_NAME\": \"Carcinoma in situ of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"isExcluded\": true,\n            \"includeDescendants\": true\n          }\n        ]\n      }\n    },\n    {\n      \"id\": 1,\n      \"name\": \"[OHDSI-NL] Adjuvant and neoadjuvant chemotherapy drugs\",\n      \"expression\": {\n        \"items\": [\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"ATC 4th\",\n              \"CONCEPT_CODE\": \"L01DB\",\n              \"CONCEPT_ID\": 21603731,\n              \"CONCEPT_NAME\": \"Anthracyclines and related substances\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"C\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Classification\",\n              \"VOCABULARY_ID\": \"ATC\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"ATC 4th\",\n              \"CONCEPT_CODE\": \"L01CD\",\n              \"CONCEPT_ID\": 21603722,\n              \"CONCEPT_NAME\": \"Taxanes\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"C\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Classification\",\n              \"VOCABULARY_ID\": \"ATC\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"4492\",\n              \"CONCEPT_ID\": 955632,\n              \"CONCEPT_NAME\": \"fluorouracil\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"194000\",\n              \"CONCEPT_ID\": 1337620,\n              \"CONCEPT_NAME\": \"capecitabine\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"3002\",\n              \"CONCEPT_ID\": 1310317,\n              \"CONCEPT_NAME\": \"cyclophosphamide\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"40048\",\n              \"CONCEPT_ID\": 1344905,\n              \"CONCEPT_NAME\": \"carboplatin\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          }\n        ]\n      }\n    },\n    {\n      \"id\": 2,\n      \"name\": \"[OHDSI-NL] metastatic breast cancer chemotherapy drugs\",\n      \"expression\": {\n        \"items\": [\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"ATC 4th\",\n              \"CONCEPT_CODE\": \"L01CD\",\n              \"CONCEPT_ID\": 21603722,\n              \"CONCEPT_NAME\": \"Taxanes\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"C\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Classification\",\n              \"VOCABULARY_ID\": \"ATC\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"337523\",\n              \"CONCEPT_ID\": 19025348,\n              \"CONCEPT_NAME\": \"ixabepilone\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"1045453\",\n              \"CONCEPT_ID\": 40230712,\n              \"CONCEPT_NAME\": \"eribulin\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"ATC 4th\",\n              \"CONCEPT_CODE\": \"L01DB\",\n              \"CONCEPT_ID\": 21603731,\n              \"CONCEPT_NAME\": \"Anthracyclines and related substances\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"C\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Classification\",\n              \"VOCABULARY_ID\": \"ATC\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"2555\",\n              \"CONCEPT_ID\": 1397599,\n              \"CONCEPT_NAME\": \"cisplatin\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"40048\",\n              \"CONCEPT_ID\": 1344905,\n              \"CONCEPT_NAME\": \"carboplatin\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"39541\",\n              \"CONCEPT_ID\": 1343346,\n              \"CONCEPT_NAME\": \"vinorelbine\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"194000\",\n              \"CONCEPT_ID\": 1337620,\n              \"CONCEPT_NAME\": \"capecitabine\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"12574\",\n              \"CONCEPT_ID\": 1314924,\n              \"CONCEPT_NAME\": \"gemcitabine\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"OMOP5042944\",\n              \"CONCEPT_ID\": 902726,\n              \"CONCEPT_NAME\": \"ado-Trastuzumab emtansine\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm Extension\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"OMOP5042946\",\n              \"CONCEPT_ID\": 902724,\n              \"CONCEPT_NAME\": \"Fam-trastuzumab deruxtecan\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm Extension\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Ingredient\",\n              \"CONCEPT_CODE\": \"2360231\",\n              \"CONCEPT_ID\": 1145484,\n              \"CONCEPT_NAME\": \"sacituzumab\",\n              \"DOMAIN_ID\": \"Drug\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"RxNorm\"\n            },\n            \"includeDescendants\": true\n          }\n        ]\n      }\n    }\n  ],\n  \"PrimaryCriteria\": {\n    \"CriteriaList\": [\n      {\n        \"ConditionOccurrence\": {\n          \"CodesetId\": 0\n        }\n      }\n    ],\n    \"ObservationWindow\": {\n      \"PriorDays\": 0,\n      \"PostDays\": 0\n    },\n    \"PrimaryCriteriaLimit\": {\n      \"Type\": \"First\"\n    }\n  },\n  \"QualifiedLimit\": {\n    \"Type\": \"First\"\n  },\n  \"ExpressionLimit\": {\n    \"Type\": \"First\"\n  },\n  \"InclusionRules\": [\n    {\n      \"name\": \"Adjuvant and neoadjuvant chemo drugs\",\n      \"expression\": {\n        \"Type\": \"ALL\",\n        \"CriteriaList\": [\n          {\n            \"Criteria\": {\n              \"DrugExposure\": {\n                \"CodesetId\": 1\n              }\n            },\n            \"StartWindow\": {\n              \"Start\": {\n                \"Days\": 0,\n                \"Coeff\": -1\n              },\n              \"End\": {\n                \"Coeff\": 1\n              },\n              \"UseEventEnd\": false\n            },\n            \"Occurrence\": {\n              \"Type\": 2,\n              \"Count\": 1\n            }\n          }\n        ],\n        \"DemographicCriteriaList\": [],\n        \"Groups\": []\n      }\n    },\n    {\n      \"name\": \"Chemo drugs for breast cancer that has spread\",\n      \"expression\": {\n        \"Type\": \"ALL\",\n        \"CriteriaList\": [\n          {\n            \"Criteria\": {\n              \"DrugExposure\": {\n                \"CodesetId\": 2\n              }\n            },\n            \"StartWindow\": {\n              \"Start\": {\n                \"Days\": 0,\n                \"Coeff\": -1\n              },\n              \"End\": {\n                \"Coeff\": 1\n              },\n              \"UseEventEnd\": false\n            },\n            \"Occurrence\": {\n              \"Type\": 2,\n              \"Count\": 1\n            }\n          }\n        ],\n        \"DemographicCriteriaList\": [],\n        \"Groups\": []\n      }\n    }\n  ],\n  \"CensoringCriteria\": [],\n  \"CollapseSettings\": {\n    \"CollapseType\": \"ERA\",\n    \"EraPad\": 0\n  },\n  \"CensorWindow\": {},\n  \"cdmVersionRange\": \">=5.0.0\"\n}"
+        },
+        {
+          "cohortId": 2,
+          "cohortName": "cancer with radiotherapy",
+          "cohortDefinition": "{\n  \"ConceptSets\": [\n    {\n      \"id\": 0,\n      \"name\": \"[OHDSI-NL] Breast cancer\",\n      \"expression\": {\n        \"items\": [\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"254837009\",\n              \"CONCEPT_ID\": 4112853,\n              \"CONCEPT_NAME\": \"Malignant tumor of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"126926005\",\n              \"CONCEPT_ID\": 81251,\n              \"CONCEPT_NAME\": \"Neoplasm of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"269485000\",\n              \"CONCEPT_ID\": 72576,\n              \"CONCEPT_NAME\": \"Benign tumor of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"isExcluded\": true,\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"126510002\",\n              \"CONCEPT_ID\": 4054740,\n              \"CONCEPT_NAME\": \"Neoplasm of skin of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"isExcluded\": true,\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"712989008\",\n              \"CONCEPT_ID\": 37016850,\n              \"CONCEPT_NAME\": \"Phyllodes tumor of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"isExcluded\": true,\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Disorder\",\n              \"CONCEPT_CODE\": \"189336000\",\n              \"CONCEPT_ID\": 81250,\n              \"CONCEPT_NAME\": \"Carcinoma in situ of breast\",\n              \"DOMAIN_ID\": \"Condition\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"isExcluded\": true,\n            \"includeDescendants\": true\n          }\n        ]\n      }\n    },\n    {\n      \"id\": 1,\n      \"name\": \"[OHDSI-NL] Radiation therapy\",\n      \"expression\": {\n        \"items\": [\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"ICD10PCS Hierarchy\",\n              \"CONCEPT_CODE\": \"DM\",\n              \"CONCEPT_ID\": 2859321,\n              \"CONCEPT_NAME\": \"Radiation Therapy @ Breast (Procedure)\",\n              \"DOMAIN_ID\": \"Procedure\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"ICD10PCS\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Procedure\",\n              \"CONCEPT_CODE\": \"399315003\",\n              \"CONCEPT_ID\": 4161415,\n              \"CONCEPT_NAME\": \"Radionuclide therapy\",\n              \"DOMAIN_ID\": \"Procedure\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"CPT4 Hierarchy\",\n              \"CONCEPT_CODE\": \"1010919\",\n              \"CONCEPT_ID\": 45889179,\n              \"CONCEPT_NAME\": \"Clinical Brachytherapy\",\n              \"DOMAIN_ID\": \"Procedure\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"C\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Classification\",\n              \"VOCABULARY_ID\": \"CPT4\"\n            },\n            \"includeDescendants\": true\n          },\n          {\n            \"concept\": {\n              \"CONCEPT_CLASS_ID\": \"Procedure\",\n              \"CONCEPT_CODE\": \"33195004\",\n              \"CONCEPT_ID\": 4141448,\n              \"CONCEPT_NAME\": \"External beam radiation therapy procedure\",\n              \"DOMAIN_ID\": \"Procedure\",\n              \"INVALID_REASON\": \"V\",\n              \"INVALID_REASON_CAPTION\": \"Valid\",\n              \"STANDARD_CONCEPT\": \"S\",\n              \"STANDARD_CONCEPT_CAPTION\": \"Standard\",\n              \"VOCABULARY_ID\": \"SNOMED\"\n            },\n            \"includeDescendants\": true\n          }\n        ]\n      }\n    }\n  ],\n  \"PrimaryCriteria\": {\n    \"CriteriaList\": [\n      {\n        \"ConditionOccurrence\": {\n          \"CodesetId\": 0\n        }\n      }\n    ],\n    \"ObservationWindow\": {\n      \"PriorDays\": 0,\n      \"PostDays\": 0\n    },\n    \"PrimaryCriteriaLimit\": {\n      \"Type\": \"First\"\n    }\n  },\n  \"QualifiedLimit\": {\n    \"Type\": \"First\"\n  },\n  \"ExpressionLimit\": {\n    \"Type\": \"First\"\n  },\n  \"InclusionRules\": [\n    {\n      \"name\": \"Radiation therapy\",\n      \"expression\": {\n        \"Type\": \"ALL\",\n        \"CriteriaList\": [\n          {\n            \"Criteria\": {\n              \"ProcedureOccurrence\": {\n                \"CodesetId\": 1\n              }\n            },\n            \"StartWindow\": {\n              \"Start\": {\n                \"Days\": 0,\n                \"Coeff\": -1\n              },\n              \"End\": {\n                \"Coeff\": 1\n              },\n              \"UseEventEnd\": false\n            },\n            \"Occurrence\": {\n              \"Type\": 2,\n              \"Count\": 1\n            }\n          }\n        ],\n        \"DemographicCriteriaList\": [],\n        \"Groups\": []\n      }\n    }\n  ],\n  \"CensoringCriteria\": [],\n  \"CollapseSettings\": {\n    \"CollapseType\": \"ERA\",\n    \"EraPad\": 0\n  },\n  \"CensorWindow\": {},\n  \"cdmVersionRange\": \">=5.0.0\"\n}"
+        },
+        {
+          "cohortId": 3,
+          "cohortName": "death",
+          "cohortDefinition": "{\n  \"ConceptSets\": [],\n  \"PrimaryCriteria\": {\n    \"CriteriaList\": [\n      {\n        \"Death\": {}\n      }\n    ],\n    \"ObservationWindow\": {\n      \"PriorDays\": 0,\n      \"PostDays\": 0\n    },\n    \"PrimaryCriteriaLimit\": {\n      \"Type\": \"First\"\n    }\n  },\n  \"QualifiedLimit\": {\n    \"Type\": \"First\"\n  },\n  \"ExpressionLimit\": {\n    \"Type\": \"First\"\n  },\n  \"InclusionRules\": [],\n  \"CensoringCriteria\": [],\n  \"CollapseSettings\": {\n    \"CollapseType\": \"ERA\",\n    \"EraPad\": 0\n  },\n  \"CensorWindow\": {},\n  \"cdmVersionRange\": \">=5.0.0\"\n}"
+        }
+      ],
+      "attr_class": ["CohortDefinitionSharedResources", "SharedResources"]
+    }
+  ],
+  "moduleSpecifications": [
+    {
+      "module": "CohortGeneratorModule",
+      "settings": {
+        "generateStats": true
+      },
+      "attr_class": ["ModuleSpecifications", "CohortGeneratorModuleSpecifications"]
+    },
+    {
+      "module": "CohortMethodModule",
+      "settings": {
+        "cmAnalysisList": [
+          {
+            "analysisId": 1,
+            "description": "KM analysis with PS Matching",
+            "getDbCohortMethodDataArgs": {
+              "studyStartDate": "19000101",
+              "studyEndDate": "20251231",
+              "firstExposureOnly": false,
+              "removeDuplicateSubjects": "keep all",
+              "restrictToCommonPeriod": false,
+              "washoutPeriod": 0,
+              "maxCohortSize": 0,
+              "covariateSettings": {
+                "temporal": false,
+                "temporalSequence": false,
+                "DemographicsGender": true,
+                "DemographicsAgeGroup": true,
+                "DemographicsRace": true,
+                "DemographicsEthnicity": true,
+                "DemographicsIndexYear": true,
+                "DemographicsIndexMonth": true,
+                "ConditionGroupEraLongTerm": true,
+                "ConditionGroupEraShortTerm": true,
+                "DrugGroupEraLongTerm": true,
+                "DrugGroupEraShortTerm": true,
+                "DrugGroupEraOverlapping": true,
+                "ProcedureOccurrenceLongTerm": true,
+                "ProcedureOccurrenceShortTerm": true,
+                "DeviceExposureLongTerm": true,
+                "DeviceExposureShortTerm": true,
+                "MeasurementLongTerm": true,
+                "MeasurementShortTerm": true,
+                "MeasurementRangeGroupLongTerm": true,
+                "MeasurementRangeGroupShortTerm": true,
+                "MeasurementValueAsConceptLongTerm": true,
+                "MeasurementValueAsConceptShortTerm": true,
+                "ObservationLongTerm": true,
+                "ObservationShortTerm": true,
+                "ObservationValueAsConceptLongTerm": true,
+                "ObservationValueAsConceptShortTerm": true,
+                "CharlsonIndex": true,
+                "Dcsi": true,
+                "Chads2": true,
+                "Chads2Vasc": true,
+                "includedCovariateConceptIds": [],
+                "includedCovariateIds": [],
+                "addDescendantsToInclude": false,
+                "excludedCovariateConceptIds": [],
+                "addDescendantsToExclude": false,
+                "shortTermStartDays": -30,
+                "mediumTermStartDays": -180,
+                "endDays": 0,
+                "longTermStartDays": -365,
+                "attr_class": "covariateSettings",
+                "attr_fun": "getDbDefaultCovariateData"
+              },
+              "attr_class": "args"
+            },
+            "createStudyPopArgs": {
+              "firstExposureOnly": false,
+              "restrictToCommonPeriod": false,
+              "washoutPeriod": 0,
+              "removeDuplicateSubjects": "keep all",
+              "removeSubjectsWithPriorOutcome": true,
+              "priorOutcomeLookback": 99999,
+              "minDaysAtRisk": 0,
+              "maxDaysAtRisk": 99999,
+              "riskWindowStart": 0,
+              "startAnchor": "cohort start",
+              "riskWindowEnd": 3650,
+              "endAnchor": "cohort end",
+              "censorAtNewRiskWindow": false,
+              "attr_class": "args"
+            },
+            "createPsArgs": {
+              "maxCohortSizeForFitting": 250000,
+              "errorOnHighCorrelation": true,
+              "stopOnError": true,
+              "prior": {
+                "priorType": "laplace",
+                "variance": 1,
+                "exclude": 0,
+                "graph": null,
+                "neighborhood": null,
+                "useCrossValidation": true,
+                "forceIntercept": false,
+                "attr_class": "cyclopsPrior"
+              },
+              "control": {
+                "maxIterations": 1000,
+                "tolerance": 2e-07,
+                "convergenceType": "gradient",
+                "autoSearch": true,
+                "fold": 10,
+                "lowerLimit": 0.01,
+                "upperLimit": 20,
+                "gridSteps": 10,
+                "minCVData": 100,
+                "cvRepetitions": 10,
+                "noiseLevel": "silent",
+                "threads": 1,
+                "seed": 1,
+                "resetCoefficients": true,
+                "startingVariance": 0.01,
+                "useKKTSwindle": false,
+                "tuneSwindle": 10,
+                "selectorType": "auto",
+                "initialBound": 2,
+                "maxBoundCount": 5,
+                "algorithm": "ccd",
+                "doItAll": true,
+                "syncCV": false,
+                "attr_class": "cyclopsControl"
+              },
+              "estimator": "att",
+              "attr_class": "args"
+            },
+            "matchOnPsArgs": {
+              "caliper": 0.2,
+              "caliperScale": "standardized logit",
+              "maxRatio": 1,
+              "allowReverseMatch": false,
+              "attr_class": "args"
+            },
+            "computeCovariateBalanceArgs": {
+              "maxCohortSize": 250000,
+              "attr_class": "args"
+            },
+            "fitOutcomeModelArgs": {
+              "modelType": "cox",
+              "stratified": true,
+              "useCovariates": true,
+              "inversePtWeighting": false,
+              "profileBounds": [-2.3026, 2.3026],
+              "prior": {
+                "priorType": "laplace",
+                "variance": 1,
+                "exclude": null,
+                "graph": null,
+                "neighborhood": null,
+                "useCrossValidation": true,
+                "forceIntercept": false,
+                "attr_class": "cyclopsPrior"
+              },
+              "control": {
+                "maxIterations": 1000,
+                "tolerance": 2e-07,
+                "convergenceType": "gradient",
+                "autoSearch": true,
+                "fold": 10,
+                "lowerLimit": 0.01,
+                "upperLimit": 20,
+                "gridSteps": 10,
+                "minCVData": 100,
+                "cvRepetitions": 10,
+                "noiseLevel": "quiet",
+                "threads": 1,
+                "seed": 1,
+                "resetCoefficients": true,
+                "startingVariance": 0.01,
+                "useKKTSwindle": false,
+                "tuneSwindle": 10,
+                "selectorType": "auto",
+                "initialBound": 2,
+                "maxBoundCount": 5,
+                "algorithm": "ccd",
+                "doItAll": true,
+                "syncCV": false,
+                "attr_class": "cyclopsControl"
+              },
+              "attr_class": "args"
+            },
+            "attr_class": "cmAnalysis"
+          },
+          {
+            "analysisId": 2,
+            "description": "KM analysis with No PS Matching",
+            "getDbCohortMethodDataArgs": {
+              "studyStartDate": "19000101",
+              "studyEndDate": "20251231",
+              "firstExposureOnly": false,
+              "removeDuplicateSubjects": "keep all",
+              "restrictToCommonPeriod": false,
+              "washoutPeriod": 0,
+              "maxCohortSize": 0,
+              "covariateSettings": {
+                "temporal": false,
+                "temporalSequence": false,
+                "DemographicsGender": true,
+                "DemographicsAgeGroup": true,
+                "DemographicsRace": true,
+                "DemographicsEthnicity": true,
+                "DemographicsIndexYear": true,
+                "DemographicsIndexMonth": true,
+                "ConditionGroupEraLongTerm": true,
+                "ConditionGroupEraShortTerm": true,
+                "DrugGroupEraLongTerm": true,
+                "DrugGroupEraShortTerm": true,
+                "DrugGroupEraOverlapping": true,
+                "ProcedureOccurrenceLongTerm": true,
+                "ProcedureOccurrenceShortTerm": true,
+                "DeviceExposureLongTerm": true,
+                "DeviceExposureShortTerm": true,
+                "MeasurementLongTerm": true,
+                "MeasurementShortTerm": true,
+                "MeasurementRangeGroupLongTerm": true,
+                "MeasurementRangeGroupShortTerm": true,
+                "MeasurementValueAsConceptLongTerm": true,
+                "MeasurementValueAsConceptShortTerm": true,
+                "ObservationLongTerm": true,
+                "ObservationShortTerm": true,
+                "ObservationValueAsConceptLongTerm": true,
+                "ObservationValueAsConceptShortTerm": true,
+                "CharlsonIndex": true,
+                "Dcsi": true,
+                "Chads2": true,
+                "Chads2Vasc": true,
+                "includedCovariateConceptIds": [],
+                "includedCovariateIds": [],
+                "addDescendantsToInclude": false,
+                "excludedCovariateConceptIds": [],
+                "addDescendantsToExclude": false,
+                "shortTermStartDays": -30,
+                "mediumTermStartDays": -180,
+                "endDays": 0,
+                "longTermStartDays": -365,
+                "attr_class": "covariateSettings",
+                "attr_fun": "getDbDefaultCovariateData"
+              },
+              "attr_class": "args"
+            },
+            "createStudyPopArgs": {
+              "firstExposureOnly": false,
+              "restrictToCommonPeriod": false,
+              "washoutPeriod": 0,
+              "removeDuplicateSubjects": "keep all",
+              "removeSubjectsWithPriorOutcome": true,
+              "priorOutcomeLookback": 99999,
+              "minDaysAtRisk": 0,
+              "maxDaysAtRisk": 99999,
+              "riskWindowStart": 0,
+              "startAnchor": "cohort start",
+              "riskWindowEnd": 3650,
+              "endAnchor": "cohort end",
+              "censorAtNewRiskWindow": false,
+              "attr_class": "args"
+            },
+            "computeCovariateBalanceArgs": {
+              "maxCohortSize": 250000,
+              "attr_class": "args"
+            },
+            "fitOutcomeModelArgs": {
+              "modelType": "cox",
+              "stratified": false,
+              "useCovariates": true,
+              "inversePtWeighting": false,
+              "profileBounds": [-2.3026, 2.3026],
+              "prior": {
+                "priorType": "laplace",
+                "variance": 1,
+                "exclude": null,
+                "graph": null,
+                "neighborhood": null,
+                "useCrossValidation": true,
+                "forceIntercept": false,
+                "attr_class": "cyclopsPrior"
+              },
+              "control": {
+                "maxIterations": 1000,
+                "tolerance": 2e-07,
+                "convergenceType": "gradient",
+                "autoSearch": true,
+                "fold": 10,
+                "lowerLimit": 0.01,
+                "upperLimit": 20,
+                "gridSteps": 10,
+                "minCVData": 100,
+                "cvRepetitions": 10,
+                "noiseLevel": "quiet",
+                "threads": 1,
+                "seed": 1,
+                "resetCoefficients": true,
+                "startingVariance": 0.01,
+                "useKKTSwindle": false,
+                "tuneSwindle": 10,
+                "selectorType": "auto",
+                "initialBound": 2,
+                "maxBoundCount": 5,
+                "algorithm": "ccd",
+                "doItAll": true,
+                "syncCV": false,
+                "attr_class": "cyclopsControl"
+              },
+              "attr_class": "args"
+            },
+            "attr_class": "cmAnalysis"
+          }
+        ],
+        "targetComparatorOutcomesList": [
+          {
+            "targetId": 1,
+            "comparatorId": 2,
+            "outcomes": [
+              {
+                "outcomeId": 3,
+                "outcomeOfInterest": true,
+                "trueEffectSize": null,
+                "attr_class": "outcome"
+              }
+            ],
+            "attr_class": "targetComparatorOutcomes"
+          }
+        ],
+        "refitPsForEveryOutcome": false,
+        "refitPsForEveryStudyPopulation": true,
+        "cmDiagnosticThresholds": {
+          "mdrrThreshold": 10,
+          "easeThreshold": 0.25,
+          "sdmThreshold": 0.1,
+          "equipoiseThreshold": 0.2,
+          "generalizabilitySdmThreshold": 1,
+          "attr_class": "CmDiagnosticThresholds"
+        }
+      },
+      "attr_class": ["ModuleSpecifications", "CohortMethodModuleSpecifications"]
+    }
+  ],
+  "attr_class": "AnalysisSpecifications"
+}

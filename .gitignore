@@ -1,0 +1,6 @@
+*.zip
+*.rds
+.RData
+.Rhistory
+.DS_Store
+*.csv
