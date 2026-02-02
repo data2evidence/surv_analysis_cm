@@ -1,6 +1,6 @@
 {
-  "workDatabaseSchema": "cdmsynpuf100pct",
-  "cdmDatabaseSchema": "cdmsynpuf100pct",
+  "workDatabaseSchema": "main",
+  "cdmDatabaseSchema": "main",
   "cohortTableNames": {
     "cohortTable": "cohort_tbl",
     "cohortSampleTable": "cohort_tbl",
@@ -10,10 +10,10 @@
     "cohortSummaryStatsTable": "cohort_tbl_summary_stats",
     "cohortCensorStatsTable": "cohort_tbl_censor_stats"
   },
-  "tempEmulationSchema": "cdmsynpuf100pct",
-  "workFolder": "/Users/amit.sharma/Documents/Projects/strategus_projects/strategus_notebooks/survival_analysis_cohort_method/results/Eunomia/strategusWork",
-  "resultsFolder": "/Users/amit.sharma/Documents/Projects/strategus_projects/strategus_notebooks/survival_analysis_cohort_method/results/Eunomia/strategusOutput",
-  "logFileName": "/Users/amit.sharma/Documents/Projects/strategus_projects/strategus_notebooks/survival_analysis_cohort_method/results/Eunomia/strategusOutput/strategus-log.txt",
+  "tempEmulationSchema": "main",
+  "workFolder": "/Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork",
+  "resultsFolder": "/Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput",
+  "logFileName": "/Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/strategus-log.txt",
   "minCellCount": 5,
   "incremental": true,
   "maxCores": 11,

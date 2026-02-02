@@ -1,0 +1,657 @@
+2026-02-02 10:37:20	[Main thread]	INFO	Strategus	execute	Collecting OMOP CDM Metadata 
+2026-02-02 10:37:20	[Main thread]	INFO	DatabaseConnector	connectSqlite	Connecting using SQLite driver
+2026-02-02 10:37:20	[Main thread]	INFO	Strategus	.message	EXECUTING: CohortGeneratorModule
+2026-02-02 10:37:21	[Main thread]	INFO	DatabaseConnector	connectSqlite	Connecting using SQLite driver
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table main.cohort_tbl
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table main.cohort_tbl
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table main.cohort_tbl_inclusion
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table main.cohort_tbl_inclusion_result
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table main.cohort_tbl_inclusion_stats
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table main.cohort_tbl_summary_stats
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table main.cohort_tbl_censor_stats
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.04secs
+2026-02-02 10:37:21	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	FUN	1/3- Generating cohort: celecoxib (id = 1)
+2026-02-02 10:37:21	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0963 secs
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	FUN	2/3- Generating cohort: diclofenac (id = 2)
+2026-02-02 10:37:21	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0854 secs
+2026-02-02 10:37:21	[Main thread]	INFO	CohortGenerator	FUN	3/3- Generating cohort: GI Bleed (id = 3)
+2026-02-02 10:37:22	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0469 secs
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.00789 secs
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	generateAndExportCohorts	Saving cohort generation information
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	generateAndExportCohorts	Saving cohort counts
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (0%) from cohortEntries because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (0%) from cohortSubjects because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	generateAndExportCohorts	Saving cohort statistics
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput/CohortGeneratorModule/cg_cohort_inclusion.csv
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_inclusion
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_inclusion_result
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_inclusion_stats
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_inclusion_stats
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_summary_stats
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_censor_stats
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput/CohortGeneratorModule/cg_cohort_inc_result.csv
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from person_count because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput/CohortGeneratorModule/cg_cohort_inc_stats.csv
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from person_count because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from person_total because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput/CohortGeneratorModule/cg_cohort_summary_stats.csv
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from base_count because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from final_count because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput/CohortGeneratorModule/cg_cohort_censor_stats.csv
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from lost_count because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	generateAndExportCohorts	Saving cohort definition set
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	generateNegativeControlOutcomeCohorts	Generating negative control outcome cohorts
+2026-02-02 10:37:22	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0109 secs
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.0118 secs
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	generateAndExportNegativeControls	Saving negative control outcome cohort definition
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	generateAndExportNegativeControls	Saving negative control outcome cohort counts
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (0%) from cohortEntries because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (0%) from cohortSubjects because value below minimum 
+2026-02-02 10:37:22	[Main thread]	INFO	CohortGenerator	runCohortGeneration	Cohort generation complete.
+2026-02-02 10:37:22	[Main thread]	INFO	Strategus	.message	Results available at: /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput/CohortGeneratorModule
+2026-02-02 10:37:22	[Main thread]	INFO	Strategus	.message	EXECUTING: CohortMethodModule
+2026-02-02 10:37:22	[Main thread]	INFO	CohortMethod		*** Creating cohortMethodData objects *** 
+2026-02-02 10:37:22	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:23	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:24	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:24	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:24	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:24	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:24	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:24	[Thread 1]	DEBUG	CohortMethod	fun	Calling getDbCohortMethodData() for targetId 1, comparatorId 2
+2026-02-02 10:37:24	[Thread 1]	INFO	DatabaseConnector	connectSqlite	Connecting using SQLite driver
+2026-02-02 10:37:24	[Thread 1]	INFO	CohortMethod	getDbCohortMethodData	Constructing target and comparator cohorts 
+2026-02-02 10:37:24	[Thread 2]	DEBUG	CohortMethod	fun	Calling getDbCohortMethodData() for targetId 4, comparatorId 5
+2026-02-02 10:37:24	[Thread 2]	INFO	DatabaseConnector	connectSqlite	Connecting using SQLite driver
+2026-02-02 10:37:24	[Thread 2]	INFO	CohortMethod	getDbCohortMethodData	Constructing target and comparator cohorts 
+2026-02-02 10:37:24	[Thread 1]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0131 secs
+2026-02-02 10:37:24	[Thread 2]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.0102 secs
+2026-02-02 10:37:24	[Thread 1]	DEBUG	CohortMethod	downSample	Pre-sample total row count is 2630
+2026-02-02 10:37:24	[Thread 1]	INFO	CohortMethod	getDbCohortMethodData	Fetching cohorts from server 
+2026-02-02 10:37:24	[Thread 1]	DEBUG	CohortMethod	getDbCohortMethodData	Fetched cohort total rows in target is 1800, total rows in comparator is 830
+2026-02-02 10:37:24	[Thread 1]	INFO	CohortMethod	getDbCohortMethodData	Fetching cohorts took 0.0278 secs 
+2026-02-02 10:37:24	[Thread 1]	WARN	FeatureExtraction	getDbCovariateData	The 'oracleTempSchema' argument is deprecated. Use 'tempEmulationSchema' instead. This warning is displayed once every 8 hours.
+2026-02-02 10:37:24	[Thread 2]	DEBUG	CohortMethod	downSample	Pre-sample total row count is 0
+2026-02-02 10:37:24	[Thread 2]	INFO	CohortMethod	getDbCohortMethodData	Fetching cohorts from server 
+2026-02-02 10:37:24	[Thread 2]	DEBUG	CohortMethod	getDbCohortMethodData	Fetched cohort total rows in target is 0, total rows in comparator is 0
+2026-02-02 10:37:24	[Thread 2]	WARN	CohortMethod	getDbCohortMethodData	Target and comparator cohorts are empty
+2026-02-02 10:37:24	[Thread 2]	INFO	CohortMethod	getDbCohortMethodData	Fetching cohorts took 0.0232 secs 
+2026-02-02 10:37:24	[Thread 2]	WARN	FeatureExtraction	getDbCovariateData	The 'oracleTempSchema' argument is deprecated. Use 'tempEmulationSchema' instead. This warning is displayed once every 8 hours.
+2026-02-02 10:37:24	[Thread 1]	INFO	FeatureExtraction		Sending temp tables to server
+2026-02-02 10:37:24	[Thread 1]	INFO	DatabaseConnector	insertTable.default	Inserting data took 0.00677 secs
+2026-02-02 10:37:24	[Thread 1]	INFO	FeatureExtraction		Constructing features on server
+2026-02-02 10:37:24	[Thread 2]	WARN	FeatureExtraction	getDbCovariateData	Population is empty. No covariates were constructed
+2026-02-02 10:37:24	[Thread 2]	DEBUG	CohortMethod	getDbCohortMethodData	Fetched covariates total count is 0
+2026-02-02 10:37:24	[Thread 2]	INFO	CohortMethod	getDbCohortMethodData	Fetching outcomes from server 
+2026-02-02 10:37:24	[Thread 2]	INFO	CohortMethod	getDbCohortMethodData	Fetching outcomes took 0.0114 secs 
+2026-02-02 10:37:24	[Thread 2]	DEBUG	CohortMethod	getDbCohortMethodData	Fetched outcomes total count is 0
+2026-02-02 10:37:24	[Thread 2]	INFO	Andromeda	saveAndromeda	Disconnected Andromeda. This data object can no longer be used
+2026-02-02 10:37:25	[Thread 1]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.934 secs
+2026-02-02 10:37:25	[Thread 1]	INFO	FeatureExtraction		Fetching data from server
+2026-02-02 10:37:26	[Thread 1]	INFO	FeatureExtraction		Fetching data took 0.246 secs
+2026-02-02 10:37:26	[Thread 1]	DEBUG	CohortMethod	getDbCohortMethodData	Fetched covariates total count is 26923
+2026-02-02 10:37:26	[Thread 1]	INFO	CohortMethod	getDbCohortMethodData	Fetching outcomes from server 
+2026-02-02 10:37:26	[Thread 1]	INFO	CohortMethod	getDbCohortMethodData	Fetching outcomes took 0.0328 secs 
+2026-02-02 10:37:26	[Thread 1]	DEBUG	CohortMethod	getDbCohortMethodData	Fetched outcomes total count is 20516
+2026-02-02 10:37:26	[Thread 1]	INFO	Andromeda	saveAndromeda	Disconnected Andromeda. This data object can no longer be used
+2026-02-02 10:37:26	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:26	[Main thread]	INFO	CohortMethod		*** Creating study populations *** 
+2026-02-02 10:37:26	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:26	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:26	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:27	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:27	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:27	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:27	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:27	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:27	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:27	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeId 3
+2026-02-02 10:37:27	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeId 3
+2026-02-02 10:37:27	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:27	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:27	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:27	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:28	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:28	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2630 rows
+2026-02-02 10:37:28	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod		*** Fitting shared propensity models *** 
+2026-02-02 10:37:28	[Main thread]	TRACE	CohortMethod		Initiating cluster consisting only of main thread
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod		Loading required package: CohortMethod 
+2026-02-02 10:37:28	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:28	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod		Loading required package: Cyclops 
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod		Loading required package: FeatureExtraction 
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod		Loading required package: Andromeda 
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod		 Attaching package: ‘CohortMethod’  
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod		The following object is masked from ‘package:TreatmentPatterns’:      getResultsDataModelSpecifications  
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod	FUN	Fitting propensity model across all outcomes (ignore messages about 'no outcome specified') 
+2026-02-02 10:37:28	[Main thread]	DEBUG	CohortMethod	FUN	Calling createPs() for shared PS using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod	createStudyPopulation	No outcome specified so skipping removing people with prior outcomes 
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:28	[Main thread]	INFO	CohortMethod	createStudyPopulation	No outcome specified so not creating outcome and time variables 
+2026-02-02 10:37:28	[Main thread]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2630 rows
+2026-02-02 10:37:28	[Main thread]	INFO	FeatureExtraction	tidyCovariateData	Removing 6 redundant covariates
+2026-02-02 10:37:28	[Main thread]	INFO	FeatureExtraction	tidyCovariateData	Removing 112 infrequent covariates
+2026-02-02 10:37:28	[Main thread]	INFO	FeatureExtraction	tidyCovariateData	Normalizing covariates
+2026-02-02 10:37:29	[Main thread]	INFO	FeatureExtraction	tidyCovariateData	Tidying covariates took 0.794 secs
+2026-02-02 10:37:29	[Main thread]	DEBUG	CohortMethod	createPs	Propensity model fitting finished with status OK
+2026-02-02 10:37:29	[Main thread]	INFO	CohortMethod	createPs	Creating propensity scores took 0.96 secs 
+2026-02-02 10:37:29	[Main thread]	INFO	CohortMethod	FUN	Fitting propensity model across all outcomes (ignore messages about 'no outcome specified') 
+2026-02-02 10:37:29	[Main thread]	DEBUG	CohortMethod	FUN	Calling createPs() for shared PS using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip
+2026-02-02 10:37:29	[Main thread]	INFO	CohortMethod	createStudyPopulation	No outcome specified so skipping removing people with prior outcomes 
+2026-02-02 10:37:29	[Main thread]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:29	[Main thread]	INFO	CohortMethod	createStudyPopulation	No outcome specified so not creating outcome and time variables 
+2026-02-02 10:37:29	[Main thread]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:29	[Main thread]	DEBUG	CohortMethod	createPs	Propensity model fitting finished with status No subjects in population, so cannot fit model
+2026-02-02 10:37:29	[Main thread]	INFO	CohortMethod	createPs	Creating propensity scores took 0.000788 secs 
+2026-02-02 10:37:29	[Main thread]	INFO	CohortMethod		*** Adding propensity scores to study population objects *** 
+2026-02-02 10:37:29	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:30	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:30	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:30	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:30	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:30	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:30	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:30	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:30	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:30	[Main thread]	INFO	CohortMethod		*** Trimming/Matching/Stratifying *** 
+2026-02-02 10:37:30	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:30	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:31	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:31	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:31	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:31	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:31	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:31	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:31	[Thread 1]	DEBUG	CohortMethod	fun	Performing matching etc., using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/Ps_l1_s1_p2_t1_c2_o3.rds
+2026-02-02 10:37:31	[Thread 2]	DEBUG	CohortMethod	fun	Performing matching etc., using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/Ps_l1_s1_p2_t4_c5_o3.rds
+2026-02-02 10:37:31	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1658
+2026-02-02 10:37:31	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:31	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:31	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:31	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:31	[Main thread]	INFO	CohortMethod		*** Computing shared covariate balance *** 
+2026-02-02 10:37:31	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:32	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:33	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:33	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:33	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:33	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:33	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:33	[Thread 1]	DEBUG	CohortMethod	fun	Computing shared balance using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip
+2026-02-02 10:37:33	[Thread 1]	INFO	CohortMethod	fun	Computing covariate balance across all outcomes (ignore messages about 'no outcome specified') 
+2026-02-02 10:37:33	[Thread 2]	DEBUG	CohortMethod	fun	Computing shared balance using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip
+2026-02-02 10:37:33	[Thread 2]	INFO	CohortMethod	fun	Computing covariate balance across all outcomes (ignore messages about 'no outcome specified') 
+2026-02-02 10:37:33	[Thread 1]	INFO	CohortMethod	createStudyPopulation	No outcome specified so skipping removing people with prior outcomes 
+2026-02-02 10:37:33	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:33	[Thread 2]	INFO	CohortMethod	createStudyPopulation	No outcome specified so skipping removing people with prior outcomes 
+2026-02-02 10:37:33	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:33	[Thread 1]	INFO	CohortMethod	createStudyPopulation	No outcome specified so not creating outcome and time variables 
+2026-02-02 10:37:33	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2630 rows
+2026-02-02 10:37:33	[Thread 2]	INFO	CohortMethod	createStudyPopulation	No outcome specified so not creating outcome and time variables 
+2026-02-02 10:37:33	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:33	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1658
+2026-02-02 10:37:33	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:33	[Thread 2]	INFO	CohortMethod	computeCovariateBalance	Computing covariate balance took 0.489 secs 
+2026-02-02 10:37:33	[Thread 1]	INFO	CohortMethod	computeCovariateBalance	Computing covariate balance took 0.499 secs 
+2026-02-02 10:37:33	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:33	[Main thread]	INFO	CohortMethod		*** Filtering covariates for computing covariate balance *** 
+2026-02-02 10:37:33	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:33	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:33	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:34	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:35	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:35	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:35	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:35	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:35	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:35	[Thread 2]	INFO	Andromeda	saveAndromeda	Disconnected Andromeda. This data object can no longer be used
+2026-02-02 10:37:36	[Thread 1]	INFO	Andromeda	saveAndromeda	Disconnected Andromeda. This data object can no longer be used
+2026-02-02 10:37:36	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:36	[Main thread]	INFO	CohortMethod		*** Computing covariate balance (per outcome) *** 
+2026-02-02 10:37:36	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:36	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:36	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:37	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:37	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:37	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:37	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:37	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:37	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:37	[Thread 1]	DEBUG	CohortMethod	fun	Computing balance balance using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip and /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/StratPop_l1_s1_p2_t1_c2_s1_o3.rds
+2026-02-02 10:37:37	[Thread 2]	DEBUG	CohortMethod	fun	Computing balance balance using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip and /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/StratPop_l1_s1_p2_t4_c5_s1_o3.rds
+2026-02-02 10:37:38	[Thread 2]	INFO	CohortMethod	computeCovariateBalance	Computing covariate balance took 0.548 secs 
+2026-02-02 10:37:38	[Thread 1]	INFO	CohortMethod	computeCovariateBalance	Computing covariate balance took 0.554 secs 
+2026-02-02 10:37:38	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:38	[Main thread]	INFO	CohortMethod		*** Fitting outcome models for outcomes of interest *** 
+2026-02-02 10:37:38	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:38	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:38	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:39	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:39	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:39	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:39	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:39	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:39	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:39	[Thread 2]	DEBUG	CohortMethod	fun	Calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip and /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/StudyPop_l1_s1_t4_c5_o3.rds
+2026-02-02 10:37:39	[Thread 1]	DEBUG	CohortMethod	fun	Calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip and /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/StudyPop_l1_s1_t1_c2_o3.rds
+2026-02-02 10:37:39	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00596 secs 
+2026-02-02 10:37:39	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:39	[Thread 2]	DEBUG	CohortMethod	fun	Calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip and /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/StratPop_l1_s1_p2_t1_c2_s1_o3.rds
+2026-02-02 10:37:39	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.406 secs 
+2026-02-02 10:37:39	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: OK
+2026-02-02 10:37:39	[Thread 1]	DEBUG	CohortMethod	fun	Calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip and /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/StratPop_l1_s1_p2_t4_c5_s1_o3.rds
+2026-02-02 10:37:39	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.392 secs 
+2026-02-02 10:37:39	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: OK
+2026-02-02 10:37:39	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00183 secs 
+2026-02-02 10:37:39	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:39	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:39	[Main thread]	INFO	CohortMethod		*** Fitting outcome models for other outcomes *** 
+2026-02-02 10:37:39	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:39	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:39	[Main thread]	TRACE	CohortMethod		Initiating cluster with 2 threads
+2026-02-02 10:37:40	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:41	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:41	[Thread 2]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:41	[Thread 1]	TRACE			AndromedaMemoryLimit set to 7.247757312GB
+2026-02-02 10:37:41	[Thread 2]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:41	[Thread 1]	TRACE			AndromedaThreads set to 6
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10037
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10038
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2460 rows
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2383 rows
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.002 secs 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10039
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2393 rows
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.282 secs 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: ILLCONDITIONED
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10040
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2572 rows
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00199 secs 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10041
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.3 secs 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: ILLCONDITIONED
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10042
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2573 rows
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00184 secs 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2560 rows
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10043
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00182 secs 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10044
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2630 rows
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.0018 secs 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2630 rows
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10046
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00179 secs 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10047
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 36 rows
+2026-02-02 10:37:41	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00165 secs 
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2625 rows
+2026-02-02 10:37:41	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.0018 secs 
+2026-02-02 10:37:41	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:41	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10048
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10049
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2108 rows
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00167 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2255 rows
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00174 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10037
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10038
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00152 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10039
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00181 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10040
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00143 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10041
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00164 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10042
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00145 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00186 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10043
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10044
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00146 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00181 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10046
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10047
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00169 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00182 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10048
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10049
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00156 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00179 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10037
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10038
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2460 rows
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1562
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2383 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1494
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00171 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00185 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10039
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10040
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2393 rows
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1508
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2572 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1632
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00151 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10041
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2573 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1630
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00145 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10042
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2560 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1610
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00153 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10043
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2630 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1658
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00155 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10044
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2630 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1658
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00146 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10046
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 36 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 22
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.239 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: ILLCONDITIONED
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00149 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10047
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10048
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2625 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1658
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00156 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t1_c2.zip for outcomeID 10049
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2108 rows
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1364
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00181 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 2255 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 1520
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00164 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10037
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10038
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00152 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10039
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00167 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10040
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.0016 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10041
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00153 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10042
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00156 secs 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10043
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:42	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00153 secs 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:42	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:42	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10044
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:43	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.0016 secs 
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10046
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:43	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:43	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00154 secs 
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10047
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:43	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00168 secs 
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10048
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:43	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:43	[Thread 1]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00166 secs 
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	fun	Calling createStudyPopulation(), performing matching etc., and calling fitOutcomeModel() using /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusWork/CohortMethodModule/CmData_l1_t4_c5.zip for outcomeID 10049
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:43	[Thread 1]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00149 secs 
+2026-02-02 10:37:43	[Thread 1]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with prior outcomes (if any) 
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	createStudyPopulation	Removing subjects with less than 1 day(s) at risk (if any) 
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	createStudyPopulation	Study population has 0 rows
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	matchOnPs	Population size after matching is 0
+2026-02-02 10:37:43	[Thread 2]	INFO	CohortMethod	fitOutcomeModel	Fitting outcome model took 0.00136 secs 
+2026-02-02 10:37:43	[Thread 2]	DEBUG	CohortMethod	fitOutcomeModel	Outcome model fitting status is: NO SUBJECTS IN POPULATION, CANNOT FIT
+2026-02-02 10:37:43	[Main thread]	TRACE	CohortMethod		Stopping cluster
+2026-02-02 10:37:43	[Main thread]	INFO	CohortMethod		*** Summarizing results *** 
+2026-02-02 10:37:43	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:43	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:43	[Main thread]	INFO	CohortMethod	calibrateEstimates	Calibrating estimates 
+2026-02-02 10:37:43	[Main thread]	TRACE	CohortMethod	calibrateEstimates	Initiating cluster with 4 threads
+2026-02-02 10:37:44	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:44	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:45	[Thread 3]	TRACE			Thread 3 initiated
+2026-02-02 10:37:45	[Thread 4]	TRACE			Thread 4 initiated
+2026-02-02 10:37:45	[Thread 4]	TRACE			AndromedaMemoryLimit set to 3.623878656GB
+2026-02-02 10:37:45	[Thread 2]	TRACE			AndromedaMemoryLimit set to 3.623878656GB
+2026-02-02 10:37:45	[Thread 3]	TRACE			AndromedaMemoryLimit set to 3.623878656GB
+2026-02-02 10:37:45	[Thread 1]	TRACE			AndromedaMemoryLimit set to 3.623878656GB
+2026-02-02 10:37:45	[Thread 1]	TRACE			AndromedaThreads set to 3
+2026-02-02 10:37:45	[Thread 3]	TRACE			AndromedaThreads set to 3
+2026-02-02 10:37:45	[Thread 4]	TRACE			AndromedaThreads set to 3
+2026-02-02 10:37:45	[Thread 2]	TRACE			AndromedaThreads set to 3
+2026-02-02 10:37:45	[Main thread]	TRACE	CohortMethod	calibrateEstimates	Stopping cluster
+2026-02-02 10:37:45	[Thread 4]	TRACE			Thread 4 terminated
+2026-02-02 10:37:45	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:45	[Thread 3]	TRACE			Thread 3 terminated
+2026-02-02 10:37:45	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportToCsv	Exporting results to CSV 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportCohortMethodAnalyses	- cm__analysis table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportFromCohortMethodData	- covariate_analysis and covariate tables 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportTargetComparatorOutcomes	- target_comparator_outcome table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportAttrition	- attrition table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportCmFollowUpDist	- cm_follow_up_dist table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportCohortMethodResults	- cm__result table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	enforceMinCellValue	   censoring 0 values (0%) from targetSubjects because value below minimum 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	enforceMinCellValue	   censoring 0 values (0%) from comparatorSubjects because value below minimum 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	enforceMinCellValue	   censoring 3 values (5.8%) from targetOutcomes because value below minimum 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	enforceMinCellValue	   censoring 0 values (0%) from comparatorOutcomes because value below minimum 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportCmInteractionResults	- cm_interaction_result table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportLikelihoodProfiles	- likelihood_profile table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportCovariateBalance	- covariate_balance table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportSharedCovariateBalance	- shared_covariate_balance table 
+2026-02-02 10:37:45	[Main thread]	INFO	CohortMethod	exportPreferenceScoreDistribution	- preference_score_dist table 
+2026-02-02 10:37:46	[Main thread]	INFO	CohortMethod	exportPropensityModel	- propensity_model table 
+2026-02-02 10:37:46	[Main thread]	INFO	CohortMethod	exportKaplanMeier	- kaplan_meier_dist table 
+2026-02-02 10:37:46	[Main thread]	INFO	CohortMethod	exportKaplanMeier	  Computing KM curves 
+2026-02-02 10:37:46	[Main thread]	TRACE	CohortMethod	exportKaplanMeier	Initiating cluster with 4 threads
+2026-02-02 10:37:47	[Thread 1]	TRACE			Thread 1 initiated
+2026-02-02 10:37:47	[Thread 2]	TRACE			Thread 2 initiated
+2026-02-02 10:37:48	[Thread 3]	TRACE			Thread 3 initiated
+2026-02-02 10:37:48	[Thread 4]	TRACE			Thread 4 initiated
+2026-02-02 10:37:48	[Thread 4]	TRACE			AndromedaMemoryLimit set to 3.623878656GB
+2026-02-02 10:37:48	[Thread 1]	TRACE			AndromedaMemoryLimit set to 3.623878656GB
+2026-02-02 10:37:48	[Thread 2]	TRACE			AndromedaMemoryLimit set to 3.623878656GB
+2026-02-02 10:37:48	[Thread 3]	TRACE			AndromedaMemoryLimit set to 3.623878656GB
+2026-02-02 10:37:48	[Thread 1]	TRACE			AndromedaThreads set to 3
+2026-02-02 10:37:48	[Thread 3]	TRACE			AndromedaThreads set to 3
+2026-02-02 10:37:48	[Thread 4]	TRACE			AndromedaThreads set to 3
+2026-02-02 10:37:48	[Thread 2]	TRACE			AndromedaThreads set to 3
+2026-02-02 10:37:48	[Thread 1]	TRACE	CohortMethod	fun	Preparing KM plot for target 1, comparator 2, outcome 3, analysis 1
+2026-02-02 10:37:48	[Thread 1]	INFO	CohortMethod	prepareKaplanMeier	No strata or 1-on-1 matching detected. Using unadjusted KM. 
+2026-02-02 10:37:48	[Thread 2]	TRACE	CohortMethod	fun	Preparing KM plot for target 4, comparator 5, outcome 3, analysis 1
+2026-02-02 10:37:48	[Thread 3]	TRACE	CohortMethod	fun	Preparing KM plot for target 1, comparator 2, outcome 3, analysis 2
+2026-02-02 10:37:48	[Thread 3]	INFO	CohortMethod	prepareKaplanMeier	No strata or 1-on-1 matching detected. Using unadjusted KM. 
+2026-02-02 10:37:48	[Thread 4]	TRACE	CohortMethod	fun	Preparing KM plot for target 4, comparator 5, outcome 3, analysis 2
+2026-02-02 10:37:48	[Thread 1]	INFO	CohortMethod	enforceMinCellValue	   censoring 0 values (0%) from targetAtRisk because value below minimum 
+2026-02-02 10:37:48	[Thread 1]	INFO	CohortMethod	enforceMinCellValue	   censoring 0 values (0%) from comparatorAtRisk because value below minimum 
+2026-02-02 10:37:48	[Thread 3]	INFO	CohortMethod	enforceMinCellValue	   censoring 0 values (0%) from targetAtRisk because value below minimum 
+2026-02-02 10:37:48	[Thread 3]	INFO	CohortMethod	enforceMinCellValue	   censoring 0 values (0%) from comparatorAtRisk because value below minimum 
+2026-02-02 10:37:48	[Main thread]	TRACE	CohortMethod	exportKaplanMeier	Stopping cluster
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportKaplanMeier	  Writing to single csv file 
+2026-02-02 10:37:48	[Thread 3]	TRACE			Thread 3 terminated
+2026-02-02 10:37:48	[Thread 2]	TRACE			Thread 2 terminated
+2026-02-02 10:37:48	[Thread 1]	TRACE			Thread 1 terminated
+2026-02-02 10:37:48	[Thread 4]	TRACE			Thread 4 terminated
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportDiagnosticsSummary	Starting exportDiagnosticsSummary
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportDiagnosticsSummary	- diagnostics_summary table 
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportDiagnosticsSummary	Reading file references from outputFolder
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportDiagnosticsSummary	Reading results summary from outputFolder
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportDiagnosticsSummary	Writing diagnostics summary to CSV
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportDiagnosticsSummary	exportDiagnosticsSummary completed successfully
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportToCsv	Adding results to zip file 
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportToCsv	Exporting to CSV took 2.97 secs 
+2026-02-02 10:37:48	[Main thread]	INFO	CohortMethod	exportToCsv	Results are ready for sharing at:/Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput/CohortMethodModule/Results_388020256.zip 
+2026-02-02 10:37:48	[Main thread]	INFO	Strategus	.message	Results available at: /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cm/survival_analysis_cohort_method/results/Eunomia/strategusOutput/CohortMethodModule
+2026-02-02 10:37:48	[Main thread]	INFO	cli	clii__message	 
+2026-02-02 10:37:48	[Main thread]	INFO	cli	clii__message	[36m──[39m [1mEXECUTION SUMMARY[22m [36m───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m 
+2026-02-02 10:37:48	[Main thread]	INFO	cli	clii__message	[32m✔[39m CohortGeneratorModule  (Execution Time: 1.66 secs) 
+2026-02-02 10:37:48	[Main thread]	INFO	cli	clii__message	[32m✔[39m CohortMethodModule  (Execution Time: 26.3 secs) 
