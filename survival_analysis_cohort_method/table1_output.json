@@ -1,0 +1,7 @@
+{
+  "Characteristic": ["Age group", "   30 -  34", "   35 -  39", "   40 -  44", "   45 -  49", "Gender: female", "Medical history: General", "  Osteoarthritis", "  Rheumatoid arthritis", "  Ulcerative colitis", "Medical history: Cardiovascular disease", "  Coronary arteriosclerosis", "", "Characteristic", "Charlson comorbidity index", "    Mean", "    Std. deviation", "    Minimum", "    25th percentile", "    Median", "    75th percentile", "    Maximum", "CHADS2Vasc", "    Mean", "    Std. deviation", "    Minimum", "    25th percentile", "    Median", "    75th percentile", "    Maximum"],
+  "Count": ["", "  206", "  862", "  660", "   72", "  906", "", "1,800", "    1", "   56", "", "    3", "", "", "", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "", "  ", "  ", "  ", "  ", "  ", "  ", "  "],
+  "% (n = 1,800)": ["", " 11.4", " 47.9", " 36.7", "  4.0", " 50.3", "", "100.0", "  0.1", "  3.1", "", "  0.2", "", "Value", "", "0.6", "0.4", "0.0", "0.0", "1.0", "1.0", "2.0", "", "0.5", "0.5", "0.0", "0.0", "1.0", "1.0", "1.0"],
+  "attr_class": ["tbl_df", "tbl", "data.frame"],
+  "attr_row.names": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+}

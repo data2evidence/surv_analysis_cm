@@ -1,14 +1,14 @@
 library(DatabaseConnector)
 library(dplyr)
 library(OhdsiShinyAppBuilder)
-library(OhdsiShinyModules)
-library(shiny)
-library(future)
-library(TreatmentPatterns)
-library(CohortSurvival)
-library(readr)
+# library(OhdsiShinyModules)
+# library(shiny)
+# library(future)
+# library(TreatmentPatterns)
+# library(CohortSurvival)
+# library(readr)
 
-analysisName_base = "surv_analysis_spec_gi_bleed"
+analysisName_base = "surv_analysis_spec_gi_bleed_santan"
 analysisName <- paste0(analysisName_base, ".json")
 results_schema_name <- paste0("res_", analysisName_base, "_amit")
 
@@ -52,10 +52,14 @@ config <- initializeModuleConfig() %>%
     createDefaultEstimationConfig()
   )
 
-createShinyApp(config = config, connection = connection, resultDatabaseSettings = createDefaultResultDatabaseSettings(schema=results_schema_name))
+# createShinyApp(
+#   config = config, 
+#   connection = connection, 
+#   resultDatabaseSettings = createDefaultResultDatabaseSettings(schema=results_schema_name)
+#   )
 
-# OhdsiShinyAppBuilder::viewShiny(
-# config = config, 
-# connection = connection,  
-# resultDatabaseSettings = createDefaultResultDatabaseSettings(schema=results_schema_name)
-# )
+OhdsiShinyAppBuilder::viewShiny(
+config = config, 
+connection = connection,  
+resultDatabaseSettings = createDefaultResultDatabaseSettings(schema=results_schema_name)
+)

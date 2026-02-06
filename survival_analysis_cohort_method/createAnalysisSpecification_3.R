@@ -23,6 +23,44 @@ tarCohortId <- 1
 compCohortId <- 2
 outCohortId <- 3
 
+ncoCohortSet <- tibble::tibble(
+  cohortId = c(10037, 10038, 10039, 10040, 10041, 10042, 10043, 10044, 10046, 10047, 10048, 10049),
+  cohortName = c(
+    "Concussion with loss of consciousness",
+    "Child attention deficit disorder",
+    "Urinary tract infection caused by Escherichia coli",
+    "Anemia",
+    "Coronary arteriosclerosis",
+    "Cardiac arrest",
+    "Atrial fibrillation",
+    "Alzheimer's disease",
+    "Viral sinusitis",
+    "Myocardial infarction",
+    "Acute bacterial sinusitis",
+    "Polyp of colon"
+  ),
+  outcomeConceptId = c(375671, 440086, 4116491, 
+                         439777, 317576, 321042, 
+                         313217, 378419, 40481087, 
+                         4329847, 4294548, 4285898)
+)
+
+cgModuleSettingsCreator <- CohortGeneratorModule$new()
+# Create the negative control outcome shared resource element for the analysis specification
+ncoSharedResource <-  cgModuleSettingsCreator$createNegativeControlOutcomeCohortSharedResourceSpecifications(
+  negativeControlOutcomeCohortSet = ncoCohortSet,
+  occurrenceType = "all",
+  detectOnDescendants = TRUE
+)
+
+negativeControlOutcomes <- lapply(
+  X = ncoCohortSet$cohortId,
+  FUN = CohortMethod::createOutcome,
+  outcomeOfInterest = FALSE,
+  trueEffectSize = 1,
+  priorOutcomeLookback = 30
+)
+
 # priorOutcomeLookback <- 30
 studyStartDate <- "19000101"
 studyEndDate <- "20251231"
@@ -48,21 +86,27 @@ timeAtRisks <- tibble(
 )
 
 # Define the outcome
-outcomeList <- lapply(seq_len(1), function(i) {
+outcomeOfInterest <- lapply(seq_len(1), function(i) {
   CohortMethod::createOutcome(
     outcomeId = outcomeCohortId,
-    # outcomeOfInterest = TRUE,
+    outcomeOfInterest = TRUE,
     # trueEffectSize = NA,
     # priorOutcomeLookback = priorOutcomeLookback
   )
 })
+
+outcomes <- append(
+  negativeControlOutcomes,
+  outcomeOfInterest
+)
 
 # Define the T-C-O structure
 targetComparatorOutcomesList <- list(
   CohortMethod::createTargetComparatorOutcomes(
     targetId = cmTcList$targetCohortId,
     comparatorId = cmTcList$comparatorCohortId,
-    outcomes = outcomeList
+    outcomes = outcomes,
+    excludedCovariateConceptIds = c(1118084, 1124300)
   )
 )
 
@@ -70,72 +114,58 @@ targetComparatorOutcomesList <- list(
 #           1331235,1334456,1342439)
 # thz <- c(1395058,974166,978555,907013)
 
+covarSettings <- FeatureExtraction::createDefaultCovariateSettings(addDescendantsToExclude = TRUE)
+
+getDbCmDataArgs <- CohortMethod::createGetDbCohortMethodDataArgs(
+  washoutPeriod = 183,
+  firstExposureOnly = TRUE,
+  removeDuplicateSubjects = "remove all",
+  maxCohortSize = 100000,
+  covariateSettings = covarSettings
+)
+
+createStudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(
+  minDaysAtRisk = 1,
+  riskWindowStart = 0,
+  startAnchor = "cohort start",
+  riskWindowEnd = 30,
+  endAnchor = "cohort end"
+)
+
 # Setup cohort method module
 cmAnalysisList <- list(
   CohortMethod::createCmAnalysis(
     analysisId = 1,
     description = "KM analysis with PS Matching",
-    getDbCohortMethodDataArgs = CohortMethod::createGetDbCohortMethodDataArgs(
-      # restrictToCommonPeriod = FALSE,
-      studyStartDate = studyStartDate,
-      studyEndDate = studyEndDate,
-      covariateSettings = FeatureExtraction::createDefaultCovariateSettings(
-  		excludedCovariateConceptIds = c(
-          1124300,  # Diclofenac
-          1118084   # Celecoxib
-      	),
-      # excludedCovariateConceptIds = c(
-      #     aceI,  # Diclofenac
-      #     thz   # Celecoxib
-      # 	),
-  		addDescendantsToExclude = TRUE
-      )
-      # covariateSettings = covariateSettings
-    ),
-    createStudyPopArgs = CohortMethod::createCreateStudyPopulationArgs(
-        # firstExposureOnly = FALSE,
-        washoutPeriod = 180,
-        removeDuplicateSubjects = "remove all",
-        # censorAtNewRiskWindow = TRUE,
-        removeSubjectsWithPriorOutcome = TRUE,
-        # priorOutcomeLookback = priorOutcomeLookback,
-        riskWindowStart = timeAtRisks$riskWindowStart,
-        startAnchor = timeAtRisks$startAnchor,
-        riskWindowEnd = timeAtRisks$riskWindowEnd,
-        endAnchor = timeAtRisks$endAnchor,
-        # minDaysAtRisk = 1,
-        # maxDaysAtRisk = 99999
-    ),
-  	createPsArgs = CohortMethod::createCreatePsArgs(
-      errorOnHighCorrelation = TRUE,
-      stopOnError = TRUE,
-      prior = createPrior("laplace", exclude = c(0), useCrossValidation = TRUE),
-      control = createControl(noiseLevel = "silent", cvType = "auto", seed = 1,
-        resetCoefficients = TRUE, tolerance = 2e-07, cvRepetitions = 10, startingVariance =0.01),
-      estimator = "ate"
-    ),
-    matchOnPsArgs = CohortMethod::createMatchOnPsArgs(
-      maxRatio = 100
-    ),
-    computeSharedCovariateBalanceArgs = CohortMethod::createComputeCovariateBalanceArgs(
-      # maxCohortSize = 250000,
-      # covariateFilter = NULL
-    ),
-    computeCovariateBalanceArgs = CohortMethod::createComputeCovariateBalanceArgs(
-      # maxCohortSize = 250000,
-      # covariateFilter = FeatureExtraction::getDefaultTable1Specifications()
-    ),
+    
+    getDbCohortMethodDataArgs = getDbCmDataArgs,
+    createStudyPopArgs = createStudyPopArgs,
+  	# createPsArgs = CohortMethod::createCreatePsArgs(
+    #   errorOnHighCorrelation = TRUE,
+    #   stopOnError = TRUE,
+    #   prior = createPrior("laplace", exclude = c(0), useCrossValidation = TRUE),
+    #   control = createControl(noiseLevel = "silent", cvType = "auto", seed = 1,
+    #     resetCoefficients = TRUE, tolerance = 2e-07, cvRepetitions = 10, startingVariance =0.01),
+    #   estimator = "ate"
+    # ),
+    # matchOnPsArgs = CohortMethod::createMatchOnPsArgs(
+    #   maxRatio = 100
+    # ),
+    # computeSharedCovariateBalanceArgs = CohortMethod::createComputeCovariateBalanceArgs(
+    #   # maxCohortSize = 250000,
+    #   # covariateFilter = NULL
+    # ),
+    # computeCovariateBalanceArgs = CohortMethod::createComputeCovariateBalanceArgs(
+    #   # maxCohortSize = 250000,
+    #   # covariateFilter = FeatureExtraction::getDefaultTable1Specifications()
+    # ),
     fitOutcomeModelArgs = CohortMethod::createFitOutcomeModelArgs(
-      modelType = "cox",
-      useCovariates = FALSE,
-      stratified = FALSE,
-      inversePtWeighting = TRUE
+      modelType = "cox"
     )
   )
 )
 
 # Cohort Generator Module Specifications
-cgModuleSettingsCreator <- CohortGeneratorModule$new()
 cohortDefinitionShared <- cgModuleSettingsCreator$createCohortSharedResourceSpecifications(cohortDefinitionSet)
 cohortGeneratorModuleSpecifications <- cgModuleSettingsCreator$createModuleSpecifications(
   generateStats = TRUE

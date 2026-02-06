@@ -80,10 +80,12 @@ outcomesOfInterest <- lapply(
   outcomeOfInterest = TRUE
 )
 
-outcomes <- append(
-  negativeControlOutcomes,
-  outcomesOfInterest
-)
+# outcomes <- append(
+#   negativeControlOutcomes,
+#   outcomesOfInterest
+# )
+outcomes <-outcomesOfInterest
+
 
 tcos1 <- CohortMethod::createTargetComparatorOutcomes(
   targetId = 1,
@@ -98,7 +100,7 @@ tcos2 <- CohortMethod::createTargetComparatorOutcomes(
   excludedCovariateConceptIds = c(1118084, 1124300)
 )
 
-targetComparatorOutcomesList <- list(tcos1, tcos2)
+targetComparatorOutcomesList <- list(tcos1)
 
 covarSettings <- FeatureExtraction::createDefaultCovariateSettings(addDescendantsToExclude = TRUE)
 
@@ -114,16 +116,20 @@ createStudyPopArgs <- CohortMethod::createCreateStudyPopulationArgs(
   minDaysAtRisk = 1,
   riskWindowStart = 0,
   startAnchor = "cohort start",
-  riskWindowEnd = 30,
+  riskWindowEnd = 99999,
   endAnchor = "cohort end"
 )
 
-matchOnPsArgs <- CohortMethod::createMatchOnPsArgs()
-fitOutcomeModelArgs <- CohortMethod::createFitOutcomeModelArgs(modelType = "cox")
 createPsArgs <- CohortMethod::createCreatePsArgs(
-  stopOnError = FALSE,
-  control = Cyclops::createControl(cvRepetitions = 1)
+  errorOnHighCorrelation = TRUE,
+  stopOnError = TRUE,
+  prior = createPrior("laplace", exclude = c(0), useCrossValidation = TRUE),
+  control = createControl(noiseLevel = "silent", cvType = "auto", seed = 1, resetCoefficients = TRUE, tolerance = 2e-07, cvRepetitions = 10, startingVariance =0.01),
+#   control = Cyclops::createControl(cvRepetitions = 1)
 )
+matchOnPsArgs <- CohortMethod::createMatchOnPsArgs(maxRatio = 100)
+fitOutcomeModelArgs <- CohortMethod::createFitOutcomeModelArgs(modelType = "cox")
+
 computeSharedCovBalArgs <- CohortMethod::createComputeCovariateBalanceArgs()
 computeCovBalArgs <- CohortMethod::createComputeCovariateBalanceArgs(
   covariateFilter = FeatureExtraction::getDefaultTable1Specifications()
@@ -149,7 +155,28 @@ cmAnalysis2 <- CohortMethod::createCmAnalysis(
   fitOutcomeModelArgs = fitOutcomeModelArgs
 )
 
-cmAnalysisList <- list(cmAnalysis1, cmAnalysis2)
+cmAnalysis3 <- CohortMethod::createCmAnalysis(
+  analysisId = 3,
+  description = "No matching, simple outcome model",
+  getDbCohortMethodDataArgs = getDbCmDataArgs,
+  createStudyPopArgs = createStudyPopArgs,
+  fitOutcomeModelArgs = fitOutcomeModelArgs
+)
+
+cmAnalysis4 <- CohortMethod::createCmAnalysis(
+  analysisId = 4,
+  description = "Matching on ps and covariates, simple outcomeModel",
+  getDbCohortMethodDataArgs = getDbCmDataArgs,
+  createStudyPopArgs = createStudyPopArgs,
+  createPsArgs = createPsArgs,
+  matchOnPsArgs = matchOnPsArgs,
+  computeSharedCovariateBalanceArgs = computeSharedCovBalArgs,
+  computeCovariateBalanceArgs = computeCovBalArgs,
+  fitOutcomeModelArgs = fitOutcomeModelArgs
+)
+
+cmAnalysisList <- list(cmAnalysis2)
+# cmAnalysisList <- list(cmAnalysis1, cmAnalysis2)
 
 analysesToExclude <- NULL
 

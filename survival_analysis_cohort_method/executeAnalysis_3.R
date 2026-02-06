@@ -10,7 +10,7 @@ library(readr)
 
 analysisName_base = "surv_analysis_spec_gi_bleed_santan"
 analysisName <- paste0(analysisName_base, ".json")
-results_schema_name <- paste0("res_", analysisName_base, "_santan")
+results_schema_name <- paste0("res_", analysisName_base, "_amit")
 
 ## =========== START OF INPUTS ==========
 # cdmDatabaseSchema <- "cdm_5pct_9a0f90a32250497d9483c981ef1e1e70"
@@ -22,7 +22,11 @@ databaseName <- "Eunomia" # Only used as a folder name for results from the stud
 minCellCount <- 5
 cohortTableName <- "cohort_tbl"
 
-connectionDetails <- Eunomia::getEunomiaConnectionDetails()
+# connectionDetails <- Eunomia::getEunomiaConnectionDetails()
+connectionDetails <- DatabaseConnector::createConnectionDetails(
+  dbms = "sqlite",
+  server = "/Users/amit.sharma/Documents/GiBleed_5.3.sqlite"
+)
 
 # clean results folder
 # results_folder <- file.path(outputLocation)
@@ -139,8 +143,9 @@ config <- initializeModuleConfig() %>%
 
 databaseSettings <- createDefaultResultDatabaseSettings(
   schema=results_schema_name,
-  cgTable = "cohort_tbl",
-  cmTablePrefix = "cm_"
+  esTablePrefix = " ",
+  # cgTable = "cohort_tbl",
+  # cmTablePrefix = "cm_"
   )
 
 OhdsiShinyAppBuilder::viewShiny(
