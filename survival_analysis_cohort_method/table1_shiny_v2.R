@@ -33,12 +33,22 @@ connectionDetails <- createConnectionDetails(
 )
 
 ######### function to reformat and display table 1 ##############
+
 format_table1 <- function(tb) {
+  # Dynamically detect the percent column name (e.g., '% (n = 1,800)')
+  percent_col <- names(tb)[grepl("^% \\(n = [0-9,]+\\)$", names(tb))]
+  if (length(percent_col) == 0) {
+    percent_col <- names(tb)[grepl("%", names(tb))][1] # fallback: any column with %
+  }
+  if (is.na(percent_col) || is.null(percent_col) || percent_col == "") {
+    stop("Could not find percent column in Table 1 data.")
+  }
+
   blank_row <- tibble(
     Characteristic = "",
     Count = "",
-    `% (n = 1,800)` = ""
   )
+  blank_row[[percent_col]] <- ""
 
   is_blank_row <- function(row_tbl) {
     if (!is.data.frame(row_tbl) || nrow(row_tbl) == 0) {
@@ -74,7 +84,7 @@ format_table1 <- function(tb) {
     row <- tb[i, ]
     trimmed_char <- str_trim(ifelse(is.na(row$Characteristic), "", row$Characteristic))
     trimmed_count <- str_trim(ifelse(is.na(row$Count), "", row$Count))
-    trimmed_percent <- str_trim(ifelse(is.na(row$`% (n = 1,800)`), "", row$`% (n = 1,800)`))
+    trimmed_percent <- str_trim(ifelse(is.na(row[[percent_col]]), "", row[[percent_col]]))
 
     if (trimmed_char %in% partition_before_headers) {
       out <- append_partition(out)
@@ -129,30 +139,21 @@ format_table1 <- function(tb) {
       }
 
       # Extract values
-      mean_val <- stats$`% (n = 1,800)`[stats$stat == "Mean"]
-      sd_val   <- stats$`% (n = 1,800)`[stats$stat == "Std. deviation"]
-      min_val  <- stats$`% (n = 1,800)`[stats$stat == "Minimum"]
-      max_val  <- stats$`% (n = 1,800)`[stats$stat == "Maximum"]
-      perc_25 <- stats$`% (n = 1,800)`[stats$stat == "25th percentile"]
-      perc_med <- stats$`% (n = 1,800)`[stats$stat == "Median"]
-      perc_75 <- stats$`% (n = 1,800)`[stats$stat == "75th percentile"]
+      mean_val <- stats[[percent_col]][stats$stat == "Mean"]
+      sd_val   <- stats[[percent_col]][stats$stat == "Std. deviation"]
+      min_val  <- stats[[percent_col]][stats$stat == "Minimum"]
+      max_val  <- stats[[percent_col]][stats$stat == "Maximum"]
+      perc_25 <- stats[[percent_col]][stats$stat == "25th percentile"]
+      perc_med <- stats[[percent_col]][stats$stat == "Median"]
+      perc_75 <- stats[[percent_col]][stats$stat == "75th percentile"]
 
       # Add formatted numeric rows
-      mean_sd_row <- tibble(
-        Characteristic = "    Mean (SD)",
-        Count = "",
-        `% (n = 1,800)` = paste0(mean_val, " (", sd_val, ")")
-      )
-      min_max_row <- tibble(
-        Characteristic = "    Min, Max",
-        Count = "",
-        `% (n = 1,800)` = paste0("[", min_val, ", ", max_val, "]")
-      )
-      perc_row <- tibble(
-        Characteristic = "    Percentiles [25th, Median, 75th]",
-        Count = "",
-        `% (n = 1,800)` = paste0("[", perc_25, ", ", perc_med, ", ", perc_75, "]")
-      )
+      mean_sd_row <- tibble(Characteristic = "    Mean (SD)", Count = "")
+      mean_sd_row[[percent_col]] <- paste0(mean_val, " (", sd_val, ")")
+      min_max_row <- tibble(Characteristic = "    Min, Max", Count = "")
+      min_max_row[[percent_col]] <- paste0("[", min_val, ", ", max_val, "]")
+      perc_row <- tibble(Characteristic = "    Percentiles [25th, Median, 75th]", Count = "")
+      perc_row[[percent_col]] <- paste0("[", perc_25, ", ", perc_med, ", ", perc_75, "]")
 
       out <- append(out, list(mean_sd_row, min_max_row, perc_row))
 

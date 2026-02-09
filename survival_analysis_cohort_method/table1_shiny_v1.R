@@ -60,9 +60,10 @@ covData1 <- getDbCovariateData(
 print("Covariate data for target cohort (cohortId 1) loaded successfully.")
 print(covData1)
 # Pull covariate names as a vector
-# covariate_names <- covData1$covariateRef %>% dplyr::pull(covariateName)
-# print(covariate_names)
-# cat("Number of covariates:", length(covariate_names), "\n")
+print("Covariate names:")
+covariate_names <- covData1$covariateRef %>% dplyr::pull(covariateName)
+print(covariate_names)
+cat("Number of covariates:", length(covariate_names), "\n")
 
 # Or to see the full table in R:
 covariate_table <- covData1$covariateRef %>% collect()
