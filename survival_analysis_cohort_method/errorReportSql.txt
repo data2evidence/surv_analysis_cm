@@ -2,11 +2,12 @@ DBMS:
 postgresql
 
 Error:
-org.postgresql.util.PSQLException: ERROR: relation "res_surv_analysis_spec_gi_bleed_santan_amit.cohort_tbl" does not exist
-  Position: 32
+org.postgresql.util.PSQLException: ERROR: operator does not exist: character varying = integer
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 97
 
 SQL:
-SELECT DISTINCT cohort_id FROM res_surv_analysis_spec_gi_bleed_santan_amit.cohort_tbl;
+SELECT table1_json FROM res_surv_analysis_spec_gi_bleed_santan_amit.tb1_results WHERE cohort_id = 2 ;
 
 R version:
 R version 4.4.1 (2024-06-14)
